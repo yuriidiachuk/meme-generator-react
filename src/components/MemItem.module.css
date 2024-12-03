@@ -1,0 +1,38 @@
+.memitem {
+  padding: 20px 20px;
+  width: min-content;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border: 1px solid #000;
+}
+.memitem button {
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.memitem p {
+  font-size: 25px;
+}
+.like {
+  background-color: green;
+}
+.like:hover {
+  background-color: rgb(2, 171, 2);
+  transition: all 0.3s;
+}
+.dislike {
+  background-color: rgb(178, 2, 2);
+}
+.dislike:hover {
+  background-color: rgb(222, 0, 0);
+  transition: all 0.3s;
+}
+
+.memitem button img {
+  margin-left: 10px;
+  width: 30px;
+}
