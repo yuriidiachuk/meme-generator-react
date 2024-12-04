@@ -115,7 +115,9 @@ function App() {
   }
 
   // Filter Hot Memes
-  const hotMemes = memesList.filter((meme) => meme.upvotes > 6);
+  const hotMemes = memesList.filter(
+    (meme) => meme.upvotes > 6 && meme.downvotes < 6
+  );
 
   // Filter Regular Memes
   const regularMemes = memesList.filter((meme) => meme.upvotes <= 6);
