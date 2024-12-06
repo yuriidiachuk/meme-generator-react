@@ -1,7 +1,7 @@
 import styles from "./MemItem.module.css";
 function MemItem({ meme, onUpvote, onDownvote }) {
   return (
-    <div className={styles.memitem}>
+    <div className={styles.memItem}>
       <img src={meme.img} alt={meme.title} />
       <p>{meme.title}</p>
       <button className={styles.like} onClick={() => onUpvote(meme.id)}>

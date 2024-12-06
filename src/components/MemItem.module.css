@@ -1,11 +1,11 @@
-.memitem {
+.memItem {
   padding: 20px 20px;
   width: min-content;
   margin: 0 auto;
   margin-bottom: 40px;
   border: 1px solid #000;
 }
-.memitem button {
+.memItem button {
   color: aliceblue;
   cursor: pointer;
   border: none;
@@ -14,7 +14,7 @@
   margin-right: 20px;
   font-size: 20px;
 }
-.memitem p {
+.memItem p {
   font-size: 25px;
 }
 .like {
@@ -32,7 +32,7 @@
   transition: all 0.3s;
 }
 
-.memitem button img {
+.memItem button img {
   margin-left: 10px;
   width: 30px;
 }
