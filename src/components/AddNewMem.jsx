@@ -1,5 +1,11 @@
 import styles from "./AddNewMem.module.css";
-function AddNewMem({ handleSubmit, memeName, setMemeName, setMemeImage }) {
+function AddNewMem({
+  handleSubmit,
+  memeName,
+  setMemeName,
+  setMemeImage,
+  memeImage,
+}) {
   return (
     <div className={styles.addNewMem}>
       <h1>Add your mem</h1>
@@ -23,6 +29,14 @@ function AddNewMem({ handleSubmit, memeName, setMemeName, setMemeImage }) {
             }
             required
           />
+          <br />
+          {/* <label>or paste Url: </label>
+          <input
+            type="url"
+            value={memeImage}
+            onChange={(e) => setMemeImage(e.target.value)}
+            required
+          /> */}
         </div>
         <button type="submit">Add Meme</button>
       </form>

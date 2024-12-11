@@ -11,7 +11,7 @@ function App() {
   const [memesList, setMemesList] = useState(data);
   const [showHot] = useState(false);
   const [memeName, setMemeName] = useState("");
-  const [memeImage, setMemeImage] = useState(null);
+  const [memeImage, setMemeImage] = useState("");
 
   console.log(memesList);
   // Handle upvote
@@ -48,17 +48,19 @@ function App() {
         img: memeImage,
       });
       setMemeName("");
-      setMemeImage(null);
+      setMemeImage("");
     }
   };
 
   // Filter Hot Memes
   const hotMemes = memesList.filter(
-    (meme) => meme.upvotes > 6 && meme.downvotes < 6
+    (meme) => meme.upvotes > 5 && meme.downvotes <= 5
   );
 
   // Filter Regular Memes
-  const regularMemes = memesList.filter((meme) => meme.upvotes <= 6);
+  const regularMemes = memesList.filter(
+    (meme) => meme.upvotes <= 5 || meme.downvotes > 5
+  );
 
   return (
     <BrowserRouter>
@@ -94,6 +96,7 @@ function App() {
                 <AddNewMem
                   handleSubmit={handleSubmit}
                   memeName={memeName}
+                  memeImage={memeImage}
                   setMemeImage={setMemeImage}
                   setMemeName={setMemeName}
                 />
