@@ -54,12 +54,12 @@ function App() {
 
   // Filter Hot Memes
   const hotMemes = memesList.filter(
-    (meme) => meme.upvotes > 5 && meme.downvotes <= 5
+    (meme) => meme.upvotes - meme.downvotes > 5
   );
 
   // Filter Regular Memes
   const regularMemes = memesList.filter(
-    (meme) => meme.upvotes <= 5 || meme.downvotes > 5
+    (meme) => meme.upvotes - meme.downvotes < 6
   );
 
   return (
